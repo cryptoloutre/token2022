@@ -16,15 +16,15 @@ export async function buildMetadataTransaction(
 
     const transaction = new Transaction();
     const mintAuthority = new PublicKey(config.mintAuthority);
-    const updateAuthority = new PublicKey(config.metadataExtension.metadataUpdateAuthority);
     const name = config.name;
     const symbol = config.symbol;
     const uri = config.uri;
     const additionalMetadata = config.additionalMetadata;
-
+    
     // Metadatas store in the mint account
     if (config.metadataExtension.enabled == true) {
-
+        const updateAuthority = new PublicKey(config.metadataExtension.metadataUpdateAuthority);
+        
         const additionalLamports = await getAdditionalRentForNewMetadata(
             connection,
             mint,
