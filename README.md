@@ -23,7 +23,7 @@ Open the `config.ts` file and set your private key in Bytes and set the endpoint
 2. Create your token by running `npx ts-node create.ts`
 
 ## Airdrop your token
-1. Open the `receivers.json` file and paste the list of addresses you want to airdrop to and the amounts of tokens. The file has to look like this:
+1. Open the `receivers.json` file and paste the list of addresses you want to airdrop to and the amounts of tokens. The file should look like this:
 ```
    [
     {
