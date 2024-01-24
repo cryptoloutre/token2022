@@ -16,7 +16,7 @@ import { getAccountsToWithdrawFrom } from './utils/getAccountsToWithdrawFrom';
 async function collectTransferFees() {
     const mint = new PublicKey(""); // TO DO put the mint address of your token
     const destinationAddress = new PublicKey(""); // TO DO put the desired address
-    const withdrawWithheldAuthority = new PublicKey(""); // TO DO put the withdraw Authority of your token
+    const withdrawWithheldAuthority = payerKeypair.publicKey; // We assume the payer is also the withdraw authority
 
     const accountsToWithdrawFrom = await getAccountsToWithdrawFrom(mint);
     console.log("Collect started...")

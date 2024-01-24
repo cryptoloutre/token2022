@@ -3,8 +3,8 @@
 Starter codes for getting started with [Tokens Extensions](https://spl.solana.com/token-2022). You will find code to:
 - create your token
 - airdrop it
+- collect transfer fees if your token has this extention
 - update your token (TO DO)
-- collect transfer fees if your token has this extention (TO DO)
   
 
 ## Installation
@@ -38,8 +38,10 @@ Open the `config.ts` file and set your private key in Bytes and set the endpoint
 ```
 2. Airdrop your token by running `npx ts-node mintTo.ts`
 
-## Update your token
-TO DO...
-
 ## Collect transfer fees
+If your token has transfer fees, you can collect them. To do it:
+1. Open the `collectTransferFees.ts` file and set the `mint` addresse of your token and the `destinationAddress` (where the fees will be send to)
+2. Collect the fees by running `npx ts-node collectTransferFees.ts` 
+
+## Update your token
 TO DO...
