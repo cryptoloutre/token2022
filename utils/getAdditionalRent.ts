@@ -1,12 +1,7 @@
 import { ExtensionType, TOKEN_2022_PROGRAM_ID, TokenAccountNotFoundError, getNewAccountLenForExtensionLen } from "@solana/spl-token";
-import { Field, TokenMetadata } from "@solana/spl-token-metadata";
+import { TokenMetadata } from "@solana/spl-token-metadata";
 import {
-    createInitializeInstruction,
-    createRemoveKeyInstruction,
-    createUpdateAuthorityInstruction,
-    createUpdateFieldInstruction,
     pack,
-    unpack,
 } from '@solana/spl-token-metadata';
 import { Connection, PublicKey } from "@solana/web3.js";
 

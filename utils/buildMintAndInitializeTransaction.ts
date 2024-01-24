@@ -35,8 +35,8 @@ export async function buildMintAndInitializeTransaction(
 
     /// Transfer Fees
     if (config.transferFeesExtension.enabled == true) {
-        const transferFeeConfigAuthority = config.transferFeesExtension.transferFeeConfigAuthority ? new PublicKey(config.transferFeesExtension.transferFeeConfigAuthority) : null;
-        const withdrawWithheldAuthority = config.transferFeesExtension.withdrawWithheldAuthority ? new PublicKey(config.transferFeesExtension.withdrawWithheldAuthority) : null;
+        const transferFeeConfigAuthority = new PublicKey(config.transferFeesExtension.transferFeeConfigAuthority);
+        const withdrawWithheldAuthority = new PublicKey(config.transferFeesExtension.withdrawWithheldAuthority);
         extensions.push(ExtensionType.TransferFeeConfig);
         instructions.push(createInitializeTransferFeeConfigInstruction(
             mint,
